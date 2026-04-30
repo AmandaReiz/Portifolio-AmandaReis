@@ -383,7 +383,7 @@ export default function App() {
                 <div className="relative flex size-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full border-[2mm] border-[#ff5a00] bg-[radial-gradient(circle_at_50%_30%,#2a2a2a_0%,#111_45%,#050505_100%)] shadow-[0_0_40px_rgba(255,90,0,0.95),0_0_130px_rgba(255,90,0,0.34)] sm:size-[400px] lg:size-[470px]">
                   <div className="absolute inset-[1px] overflow-hidden rounded-full bg-[#111]">
                     <img
-                      src="./foto1.jpeg"
+                      src="/foto1.jpeg"
                       alt="Foto de Amanda Reis"
                       className="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
                     />
@@ -415,7 +415,7 @@ export default function App() {
                     <div className="pointer-events-none absolute inset-4 rounded-[1.6rem] border border-white/8" />
                     <div className="absolute inset-4 overflow-hidden rounded-[1.6rem]">
                       <img
-                        src="./foto2.jpg"
+                        src="/foto2.jpg"
                         alt="Retrato de Amanda Reis"
                         className="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
                       />
