@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  background: #050505;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(255, 90, 0, 0.12), transparent 28%),
+    #050505;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(255, 90, 0, 0.45);
+  color: #ffffff;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 90, 0, 0.95), rgba(149, 53, 255, 0.85));
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: #ff5a00;
+  transition: right 220ms ease;
+}
+
+.nav-link:hover::after {
+  right: 0;
+}
+
+.type-caret {
+  display: inline-block;
+  width: 0.65ch;
+  height: 1em;
+  margin-left: 0.2ch;
+  vertical-align: -0.1em;
+  border-right: 3px solid currentColor;
+  animation: blink-caret 1s steps(1) infinite;
+}
+
+.scroll-hint {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.scroll-hint:hover .scroll-arrow,
+.scroll-hint:hover {
+  color: #ff5a00;
+}
+
+#sobre .group:hover {
+  box-shadow: 0 0 0 1px rgba(255, 90, 0, 0.25), 0 30px 110px rgba(255, 90, 0, 0.35);
+}
+
+#sobre .group:hover img {
+  transform: scale(1.05);
+}
+
+.scroll-arrow {
+  display: inline-block;
+  animation: scroll-nudge 1.4s ease-in-out infinite;
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(24px);
+  opacity: 0.85;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.orb-one {
+  top: 14%;
+  right: 12%;
+  width: 68px;
+  height: 68px;
+  background: rgba(255, 90, 0, 0.68);
+  animation: float-orb 14s ease-in-out infinite;
+}
+
+.orb-two {
+  top: 54%;
+  right: 4%;
+  width: 92px;
+  height: 92px;
+  background: rgba(149, 53, 255, 0.45);
+  animation: float-orb 18s ease-in-out infinite reverse;
+}
+
+.orb-three {
+  bottom: 16%;
+  right: 24%;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 90, 0, 0.56);
+  animation: float-orb 16s ease-in-out infinite;
+}
+
+.orb-four {
+  top: 32%;
+  right: 34%;
+  width: 38px;
+  height: 38px;
+  background: rgba(149, 53, 255, 0.38);
+  animation: float-orb 12s ease-in-out infinite reverse;
+}
+
+.orb-five {
+  top: 8%;
+  right: 6%;
+  width: 48px;
+  height: 48px;
+  background: rgba(149, 53, 255, 0.52);
+  animation: float-orb 15s ease-in-out infinite;
+}
+
+.orb-six {
+  bottom: 12%;
+  right: 8%;
+  width: 64px;
+  height: 64px;
+  background: rgba(149, 53, 255, 0.48);
+  animation: float-orb 20s ease-in-out infinite reverse;
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(-18px, 14px, 0);
+  }
+  50% {
+    transform: translate3d(12px, -18px, 0);
+  }
+  75% {
+    transform: translate3d(-8px, 10px, 0);
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .floating-orb,
+  .nav-link::after,
+  .type-caret {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .scroll-hint {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+}
