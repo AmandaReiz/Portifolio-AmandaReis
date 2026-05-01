@@ -23,7 +23,7 @@ const skillGroups = [
   {
     title: "Frameworks & Bibliotecas",
     description: "Ferramentas que apoiam comunicação, dados, containers e persistência.",
-    items: ["Kafka", "WebSockets", "Redis", "Docker", "MySQL", "ORM"],
+    items: ["Kafka", "WebSockets", "Redis", "Docker", "AWS", "MySQL", "ORM"],
   },
   {
     title: "Arquitetura",
@@ -323,7 +323,7 @@ export default function App() {
                     Ver projetos
                   </a>
                   <a
-                    href="/curriculo-amanda-reis-v6.pdf"
+                    href="/curriculo-amanda-reis-v7.pdf"
                     download
                     className="inline-flex items-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-8 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.14)] backdrop-blur transition hover:-translate-y-1 hover:scale-105 hover:border-[#8b5cf6] hover:bg-[#7c3aed]/28 hover:shadow-[0_18px_50px_rgba(124,58,237,0.28)]"
                   >
@@ -648,7 +648,7 @@ export default function App() {
                 competências técnicas e links profissionais.
               </p>
               <a
-                href="/curriculo-amanda-reis-v6.pdf"
+                href="/curriculo-amanda-reis-v7.pdf"
                 download
                 className="mt-8 inline-flex rounded-full bg-[#7c3aed] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#8b5cf6]"
               >
