@@ -13,7 +13,7 @@ const skillGroups = [
   {
     title: "Front-end",
     description: "Tecnologias para criar interfaces responsivas, modernas e bem estruturadas.",
-    items: ["HTML", "CSS", "JavaScript", "React", "Angular", "Tailwind"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular", "Tailwind"],
   },
   {
     title: "Back-end",
