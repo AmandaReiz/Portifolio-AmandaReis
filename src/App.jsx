@@ -49,6 +49,29 @@ const skillGroups = [
 
 const projects = [
   {
+    title: "HelpdeskCloud-AWS",
+    category: "Full Stack",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "JWT",
+      "PostgreSQL",
+      "Flyway",
+      "Swagger",
+      "JUnit",
+      "Mockito",
+      "GitHub Actions",
+      "Docker",
+    ],
+    description:
+      "Sistema de chamados de TI full stack com backend em Java e Spring Boot, autenticação JWT, CRUD completo de tickets, documentação com Swagger, PostgreSQL com versionamento via Flyway, testes de integração e pipeline CI/CD no GitHub Actions.",
+    frontendUrl: "https://frontend-pi-seven-55.vercel.app",
+    backendUrl: "https://helpdeskcloud-aws.onrender.com/swagger-ui/index.html",
+    repositoryUrl: "https://github.com/AmandaReiz/HelpdeskCloud-AWS",
+    imageUrl: null,
+  },
+  {
     title: "PulseNotify",
     category: "Spring Boot",
     stack: ["Java", "Spring Boot", "React", "WebSockets", "Redis", "Docker"],
@@ -86,6 +109,9 @@ const filters = [
   "Todos",
   "Java",
   "Spring Boot",
+  "Next.js",
+  "PostgreSQL",
+  "Flyway",
   "Spring Web",
   "OpenFeign",
   "HTML",
@@ -100,6 +126,9 @@ const filters = [
   "MySQL",
   "Swagger",
   "JWT",
+  "JUnit",
+  "Mockito",
+  "GitHub Actions",
   "Render",
 ];
 
