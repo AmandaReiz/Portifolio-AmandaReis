@@ -66,10 +66,9 @@ const projects = [
     ],
     description:
       "Sistema de chamados de TI full stack com backend em Java e Spring Boot, autenticação JWT, CRUD completo de tickets, documentação com Swagger, PostgreSQL com versionamento via Flyway, testes de integração e pipeline CI/CD no GitHub Actions.",
-    frontendUrl: "https://frontend-pi-seven-55.vercel.app",
-    backendUrl: "https://helpdeskcloud-aws.onrender.com/swagger-ui/index.html",
+    videoUrl: "https://youtu.be/91B6W1OSDTA",
     repositoryUrl: "https://github.com/AmandaReiz/HelpdeskCloud-AWS",
-    imageUrl: null,
+    imageUrl: "/prints/print-helpdesk.png",
   },
   {
     title: "PulseNotify",
