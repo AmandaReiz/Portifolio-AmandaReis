@@ -5,6 +5,7 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Projetos", href: "#projetos" },
   { label: "Minhas Habilidades", href: "#habilidades" },
+  { label: "Soft Skills", href: "#soft-skills" },
   { label: "Formação Acadêmica", href: "#formacao" },
   { label: "Contato", href: "#contato" },
 ];
@@ -351,7 +352,7 @@ export default function App() {
                     Ver projetos
                   </a>
                   <a
-                    href="/curriculo-amanda-reis-v7.pdf"
+                    href="/curriculo-amanda-reis-v8.pdf"
                     download
                     className="inline-flex items-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-8 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.14)] backdrop-blur transition hover:-translate-y-1 hover:scale-105 hover:border-[#8b5cf6] hover:bg-[#7c3aed]/28 hover:shadow-[0_18px_50px_rgba(124,58,237,0.28)]"
                   >
@@ -662,6 +663,70 @@ export default function App() {
           </div>
         </section>
 
+        <section id="soft-skills" className="border-b border-white/8 bg-[#080808]">
+          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Soft skills</p>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
+                Competências comportamentais que fortalecem minha atuação
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-white/68">
+                Perfil construído com disciplina, clareza na comunicação e foco consistente em evolução.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  title: "Organização",
+                  score: "96,5%",
+                  detail:
+                    "Sou extremamente disciplinada com meus prazos e estudo. Mantenho meus projetos e códigos sempre bem estruturados e limpos.",
+                },
+                {
+                  title: "Comunicação e sociabilidade",
+                  score: "89,1%",
+                  detail:
+                    "Tenho facilidade em explicar ideias técnicas de forma clara e me relacionar bem com as pessoas ao meu redor.",
+                },
+                {
+                  title: "Ambição",
+                  score: "84,6%",
+                  detail:
+                    "Sou focada em resultados. Estudo além do currículo da faculdade porque quero crescer rápido na carreira de tecnologia.",
+                },
+                {
+                  title: "Estabilidade",
+                  score: "82,3%",
+                  detail:
+                    "Mantenho a calma para resolver problemas e erros de código, sem me deixar abater quando algo não funciona de primeira.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.14),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-7 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-2xl font-black text-white">{item.title}</h3>
+                    <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-xs font-bold text-[#ff5a00]">
+                      {item.score}
+                    </span>
+                  </div>
+                  <p className="mt-5 text-base leading-7 text-white/68">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+
+            <a
+              href="/ProfileFeedback.pdf"
+              download
+              className="mt-10 inline-flex rounded-full bg-[#ff5a00] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#ff6a00]"
+            >
+              Baixar Relatório de Perfil Comportamental Completo (PDF)
+            </a>
+          </div>
+        </section>
+
         <section id="curriculo" className="border-b border-white/8 bg-[#080808]">
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
             <div className="rounded-[2rem] border border-[#7c3aed]/30 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.18),transparent_40%),linear-gradient(180deg,#0f0f0f,#070707)] p-10 shadow-[0_30px_90px_rgba(124,58,237,0.12)]">
@@ -676,7 +741,7 @@ export default function App() {
                 competências técnicas e links profissionais.
               </p>
               <a
-                href="/curriculo-amanda-reis-v7.pdf"
+                href="/curriculo-amanda-reis-v8.pdf"
                 download
                 className="mt-8 inline-flex rounded-full bg-[#7c3aed] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#8b5cf6]"
               >
