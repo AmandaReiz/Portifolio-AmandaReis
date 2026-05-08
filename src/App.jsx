@@ -84,6 +84,26 @@ const projects = [
     imageUrl: "/prints/PulseNotify.png",
   },
   {
+    title: "Sistema de Pedidos com Microsservicos",
+    category: "Java + Spring Cloud",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "React",
+      "Vite",
+      "H2",
+      "Maven",
+      "APIs REST",
+      "Microsservicos",
+      "Event Driven",
+    ],
+    description:
+      "Sistema de pedidos com arquitetura em microsservicos, API Gateway, servico de pedidos, servico de estoque e servico de notificacoes. O fluxo cria pedidos, reserva estoque automaticamente, atualiza status e registra eventos, simulando uma arquitetura orientada a eventos preparada para evoluir com Kafka e MySQL.",
+    repositoryUrl: "https://github.com/AmandaReiz/SistemaPedidosMicrosservicos",
+    imageUrl: "/prints/print-sistema-de-pedidos.png",
+  },
+  {
     title: "Gerador de Dietas",
     category: "Spring Boot",
     stack: ["Java", "Spring Boot", "Spring Web", "OpenFeign", "HTML", "CSS", "JavaScript"],
@@ -109,6 +129,7 @@ const filters = [
   "Todos",
   "Java",
   "Spring Boot",
+  "Spring Cloud Gateway",
   "Next.js",
   "PostgreSQL",
   "Flyway",
@@ -118,9 +139,15 @@ const filters = [
   "CSS",
   "JavaScript",
   "React",
+  "Vite",
   "WebSockets",
   "Redis",
   "Docker",
+  "H2",
+  "Maven",
+  "APIs REST",
+  "Microsservicos",
+  "Event Driven",
   "Node.js",
   "Express",
   "MySQL",
@@ -607,6 +634,7 @@ export default function App() {
                           Vídeo
                         </a>
                       ) : null}
+                      {project.repositoryUrl ? (
                       <a
                         href={project.repositoryUrl}
                         target="_blank"
@@ -619,6 +647,7 @@ export default function App() {
                         </svg>
                         GitHub
                       </a>
+                      ) : null}
                     </div>
                   </article>
                 ))}
