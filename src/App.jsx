@@ -161,6 +161,8 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [headerHovered, setHeaderHovered] = useState(false);
 
   useEffect(() => {
     const roles = ["full-stack", "backend", "front end"];
@@ -222,6 +224,30 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const nearTop = currentScrollY < 24;
+      const scrollingUp = currentScrollY < lastScrollY;
+      const shouldShow =
+        nearTop ||
+        activeSection === "home" ||
+        headerHovered ||
+        mobileMenuOpen ||
+        scrollingUp;
+
+      setHeaderVisible(shouldShow);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection, headerHovered, mobileMenuOpen]);
+
   const filteredProjects = useMemo(() => {
     if (activeFilter === "Todos") return projects;
     return projects.filter((project) => project.stack.includes(activeFilter));
@@ -229,7 +255,17 @@ export default function App() {
 
   return (
     <div className="overflow-x-clip bg-[#050505] text-white">
-      <header className="sticky top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4 lg:px-10">
+      <div
+        className="fixed inset-x-0 top-0 z-40 hidden h-8 md:block"
+        onMouseEnter={() => setHeaderHovered(true)}
+      />
+      <header
+        className={`sticky top-0 z-50 px-3 pt-3 transition-transform duration-300 ease-out sm:px-5 sm:pt-4 lg:px-10 ${
+          headerVisible ? "translate-y-0" : "-translate-y-[calc(100%+1rem)]"
+        }`}
+        onMouseEnter={() => setHeaderHovered(true)}
+        onMouseLeave={() => setHeaderHovered(false)}
+      >
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 rounded-[1.6rem] border border-white/10 bg-black/75 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.42)] backdrop-blur-xl sm:gap-4 sm:rounded-full sm:px-6 sm:py-4 lg:px-8">
           <a href="#home" className="whitespace-nowrap text-xl font-black tracking-wide text-white sm:text-2xl">
             <span className="text-[#ff5a00]">A</span>manda Reis
