@@ -228,9 +228,9 @@ export default function App() {
   }, [activeFilter]);
 
   return (
-    <div className="bg-[#050505] text-white">
-      <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6 lg:px-10">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-black/75 px-5 py-4 shadow-[0_18px_60px_rgba(0,0,0,0.42)] backdrop-blur-xl sm:px-6 lg:px-8">
+    <div className="overflow-x-clip bg-[#050505] text-white">
+      <header className="sticky top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 rounded-[1.6rem] border border-white/10 bg-black/75 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.42)] backdrop-blur-xl sm:gap-4 sm:rounded-full sm:px-6 sm:py-4 lg:px-8">
           <a href="#home" className="whitespace-nowrap text-xl font-black tracking-wide text-white sm:text-2xl">
             <span className="text-[#ff5a00]">A</span>manda Reis
           </a>
@@ -250,7 +250,7 @@ export default function App() {
             </span>
           </button>
 
-          <nav className="hidden flex-wrap items-center gap-x-5 gap-y-3 text-sm font-semibold text-white/80 md:flex md:justify-end md:gap-7">
+          <nav className="hidden flex-wrap items-center gap-x-3 gap-y-2 text-sm font-semibold text-white/80 md:flex md:max-w-[calc(100%-180px)] md:justify-end lg:gap-x-5 lg:gap-y-3 xl:gap-7">
               {navItems.map((item) => {
                 const isActive = activeSection === item.href.slice(1);
                 const isCurriculo = item.label === "Currículo";
@@ -332,10 +332,10 @@ export default function App() {
         ) : null}
       </header>
 
-      <main className="-mt-24">
+      <main className="-mt-20 sm:-mt-24">
         <section
           id="home"
-          className="relative overflow-hidden border-b border-white/8 bg-[radial-gradient(circle_at_78%_22%,rgba(255,90,0,0.34),transparent_18%),radial-gradient(circle_at_82%_18%,rgba(255,90,0,0.95),transparent_12%),linear-gradient(180deg,#080808_0%,#050505_100%)] pt-24"
+          className="relative overflow-hidden border-b border-white/8 bg-[radial-gradient(circle_at_78%_22%,rgba(255,90,0,0.34),transparent_18%),radial-gradient(circle_at_82%_18%,rgba(255,90,0,0.95),transparent_12%),linear-gradient(180deg,#080808_0%,#050505_100%)] pt-20 sm:pt-24"
         >
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px] opacity-20" />
           <div className="floating-orb orb-one" />
@@ -345,38 +345,38 @@ export default function App() {
           <div className="floating-orb orb-five" />
           <div className="floating-orb orb-six" />
 
-          <div className="relative mx-auto grid min-h-[calc(100vh-81px)] max-w-7xl gap-14 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-10">
+          <div className="relative mx-auto grid min-h-[calc(100svh-72px)] max-w-7xl gap-10 px-4 py-14 sm:min-h-[calc(100vh-81px)] sm:px-6 sm:py-16 md:gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(280px,0.82fr)] lg:items-center lg:px-10 lg:py-20 xl:grid-cols-[1.08fr_0.92fr]">
             <div className="max-w-3xl">
-              <p className="mb-5 text-sm font-extrabold uppercase tracking-[0.38em] text-white/80">Olá!</p>
+              <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.32em] text-white/80 sm:mb-5 sm:text-sm sm:tracking-[0.38em]">Olá!</p>
               <h1 className="text-[clamp(2.5rem,10vw,4.75rem)] font-black leading-[0.95] tracking-tight text-white">
                 Sou <span className="inline-block whitespace-nowrap text-[#ff5a00]">Amanda Reis</span>
               </h1>
-              <p className="mt-4 min-h-[2.6rem] text-xl font-bold text-[#ff5a00] sm:text-2xl">
+              <p className="mt-4 min-h-[2.3rem] text-lg font-bold text-[#ff5a00] sm:min-h-[2.6rem] sm:text-xl md:text-2xl">
                 Desenvolvedora{" "}
                 <span className="inline-flex min-w-[12ch] items-center text-white/90">
                   {typedRole}
                   <span className="type-caret" />
                 </span>
               </p>
-              <p className="mt-8 max-w-2xl text-base leading-8 text-justify text-white/72 sm:text-lg">
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-left text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg">
                 Desenvolvedora com foco em backend Java e experiência prática em projetos fullstack.
                 Construí sistemas com Spring Boot, autenticação JWT, WebSockets em tempo real, Redis e Docker
                 conectados a interfaces React. Busco meu primeiro estágio em desenvolvimento de software para
                 aplicar e evoluir essa base em um ambiente real, com preferência por Java ou JavaScript.
               </p>
 
-              <div className="mt-10 flex flex-col gap-5">
-                <div className="flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-col gap-5 sm:mt-10">
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                   <a
                     href="#projetos"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#7c3aed] px-8 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.22)] transition hover:-translate-y-1 hover:scale-105 hover:bg-[#8b5cf6] hover:shadow-[0_18px_50px_rgba(124,58,237,0.34)]"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#7c3aed] px-6 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.22)] transition hover:-translate-y-1 hover:scale-[1.02] hover:bg-[#8b5cf6] hover:shadow-[0_18px_50px_rgba(124,58,237,0.34)] sm:w-auto sm:px-8"
                   >
                     Ver projetos
                   </a>
                   <a
                     href="/curriculo-amanda-reis-v9.pdf"
                     download
-                    className="inline-flex items-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-8 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.14)] backdrop-blur transition hover:-translate-y-1 hover:scale-105 hover:border-[#8b5cf6] hover:bg-[#7c3aed]/28 hover:shadow-[0_18px_50px_rgba(124,58,237,0.28)]"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-6 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.14)] backdrop-blur transition hover:-translate-y-1 hover:scale-[1.02] hover:border-[#8b5cf6] hover:bg-[#7c3aed]/28 hover:shadow-[0_18px_50px_rgba(124,58,237,0.28)] sm:w-auto sm:px-8"
                   >
                     <svg className="size-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M12 3v12" />
@@ -386,7 +386,7 @@ export default function App() {
                     Baixar currículo
                   </a>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                   <a
                     href="https://www.instagram.com/amandar4is/"
                     target="_blank"
@@ -431,7 +431,7 @@ export default function App() {
               <div className="group relative">
                 <div className="absolute inset-0 rounded-full bg-[#ff5a00] blur-[95px] opacity-75 transition duration-500 group-hover:opacity-95" />
                 <div className="absolute -inset-4 rounded-full border border-[#ff5a00]/45" />
-                <div className="relative flex size-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full border-[2mm] border-[#ff5a00] bg-[radial-gradient(circle_at_50%_30%,#2a2a2a_0%,#111_45%,#050505_100%)] shadow-[0_0_40px_rgba(255,90,0,0.95),0_0_130px_rgba(255,90,0,0.34)] sm:size-[400px] lg:size-[470px]">
+                <div className="relative flex size-[min(76vw,280px)] items-center justify-center overflow-hidden rounded-full border-[2mm] border-[#ff5a00] bg-[radial-gradient(circle_at_50%_30%,#2a2a2a_0%,#111_45%,#050505_100%)] shadow-[0_0_40px_rgba(255,90,0,0.95),0_0_130px_rgba(255,90,0,0.34)] sm:size-[340px] md:size-[380px] lg:size-[min(38vw,430px)] xl:size-[470px]">
                   <div className="absolute inset-[1px] overflow-hidden rounded-full bg-[#111]">
                     <img
                       src="/foto1.jpeg"
@@ -445,7 +445,7 @@ export default function App() {
 
             <a
               href="#sobre"
-              className="scroll-hint absolute bottom-6 left-1/2 z-10 -translate-x-1/2 rounded-full border border-white/10 bg-black/45 px-4 py-2 text-xs font-semibold tracking-[0.25em] text-white/70 transition hover:border-[#ff5a00] hover:text-[#ff5a00] sm:bottom-8"
+              className="scroll-hint absolute bottom-5 left-1/2 z-10 hidden -translate-x-1/2 rounded-full border border-white/10 bg-black/45 px-4 py-2 text-xs font-semibold tracking-[0.25em] text-white/70 transition hover:border-[#ff5a00] hover:text-[#ff5a00] sm:bottom-8 sm:inline-flex"
             >
               <span className="inline-flex items-center gap-2">
                 <span className="scroll-arrow" aria-hidden="true">
@@ -458,11 +458,11 @@ export default function App() {
         </section>
 
         <section id="sobre" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-            <div className="group rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.12),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-6 shadow-[0_22px_70px_rgba(255,90,0,0.08),0_20px_60px_rgba(0,0,0,0.35)] transition hover:border-[#ff5a00]/50 hover:shadow-[0_28px_90px_rgba(255,90,0,0.22),0_20px_60px_rgba(0,0,0,0.4)] lg:p-8">
-              <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
+            <div className="group rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.12),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.08),0_20px_60px_rgba(0,0,0,0.35)] transition hover:border-[#ff5a00]/50 hover:shadow-[0_28px_90px_rgba(255,90,0,0.22),0_20px_60px_rgba(0,0,0,0.4)] sm:p-6 lg:p-8">
+              <div className="grid gap-8 md:gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
                 <div className="flex justify-center lg:justify-start">
-                  <div className="relative flex size-[280px] items-center justify-center overflow-hidden rounded-[2rem] border border-[#ff5a00]/35 bg-[linear-gradient(145deg,#111,#050505)] shadow-[0_25px_80px_rgba(255,90,0,0.18)] transition group-hover:shadow-[0_25px_100px_rgba(255,90,0,0.38)] sm:size-[320px]">
+                  <div className="relative flex size-[min(82vw,280px)] items-center justify-center overflow-hidden rounded-[2rem] border border-[#ff5a00]/35 bg-[linear-gradient(145deg,#111,#050505)] shadow-[0_25px_80px_rgba(255,90,0,0.18)] transition group-hover:shadow-[0_25px_100px_rgba(255,90,0,0.38)] sm:size-[320px]">
                     <div className="pointer-events-none absolute inset-4 rounded-[1.6rem] border border-white/8" />
                     <div className="absolute inset-4 overflow-hidden rounded-[1.6rem]">
                       <img
@@ -476,7 +476,7 @@ export default function App() {
 
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Sobre mim</p>
-                  <p className="mt-6 max-w-2xl text-lg leading-8 text-justify text-white/70">
+                  <p className="mt-6 max-w-2xl text-base leading-8 text-left text-white/70 sm:text-lg">
                     Estou no segundo período da faculdade de Análise e Desenvolvimento de Sistemas e já tenho
                     experiência com informática, o que me deu base para lidar com ferramentas, lógica e resolução de
                     problemas no dia a dia. Busco minha primeira oportunidade de estágio para continuar aprendendo,
@@ -485,7 +485,7 @@ export default function App() {
                   </p>
               <a
                 href="#contato"
-                className="mt-8 inline-flex rounded-full bg-[#ff5a00] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#ff6a00]"
+                className="mt-8 inline-flex w-full justify-center rounded-full bg-[#ff5a00] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#ff6a00] sm:w-auto"
               >
                 Contato
               </a>
@@ -496,18 +496,18 @@ export default function App() {
         </section>
 
         <section id="projetos" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Projetos</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Trabalhos filtrados por tecnologia com visual limpo e sofisticado
               </h2>
             </div>
 
-            <div className="mt-14 grid gap-10 lg:grid-cols-[280px_1fr]">
-              <aside className="rounded-[2rem] border border-white/8 bg-[#0a0a0a] p-6">
+            <div className="mt-12 grid gap-8 xl:grid-cols-[260px_1fr] xl:items-start">
+              <aside className="rounded-[2rem] border border-white/8 bg-[#0a0a0a] p-5 sm:p-6 xl:sticky xl:top-28">
                 <p className="text-sm font-bold uppercase tracking-[0.3em] text-white/55">Filtrar stacks</p>
-                <div className="mt-6 flex flex-wrap gap-3 lg:flex-col">
+                <div className="mt-6 flex flex-wrap gap-3 xl:flex-col">
                   {filters.map((filter) => {
                     const isActive = activeFilter === filter;
                     return (
@@ -533,14 +533,14 @@ export default function App() {
                 {filteredProjects.map((project) => (
                   <article
                     key={project.title}
-                    className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.16),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] p-7 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 hover:shadow-[0_25px_70px_rgba(255,90,0,0.16)]"
+                    className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.16),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 hover:shadow-[0_25px_70px_rgba(255,90,0,0.16)] sm:p-7"
                   >
                     <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40">
                       {project.imageUrl ? (
                         <img
                           src={project.imageUrl}
                           alt={`Preview do projeto ${project.title}`}
-                          className="h-56 w-full object-cover object-center transition duration-500 hover:scale-105"
+                          className="h-48 w-full object-cover object-center transition duration-500 hover:scale-105 sm:h-52 lg:h-56"
                         />
                       ) : (
                         <div className="flex h-56 items-center justify-center bg-[radial-gradient(circle_at_center,rgba(255,90,0,0.16),transparent_55%),linear-gradient(180deg,#101010,#070707)] text-sm font-semibold tracking-[0.25em] text-white/30">
@@ -551,8 +551,8 @@ export default function App() {
                     <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff5a00]">
                       {project.category}
                     </p>
-                    <h3 className="mt-4 text-2xl font-black text-white">{project.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-white/68">{project.description}</p>
+                    <h3 className="mt-4 text-xl font-black text-white sm:text-2xl">{project.title}</h3>
+                    <p className="mt-4 text-sm leading-7 text-white/68 sm:text-base">{project.description}</p>
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.stack.map((item) => (
                         <span
@@ -652,7 +652,7 @@ export default function App() {
         </section>
 
         <section id="habilidades" className="border-b border-white/8 bg-[#050505]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Minhas habilidades</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
@@ -663,11 +663,11 @@ export default function App() {
               </p>
             </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {skillGroups.map((group) => (
                 <article
                   key={group.title}
-                  className="flex min-h-[280px] flex-col rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.16),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-7 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.35)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 hover:shadow-[0_25px_70px_rgba(255,90,0,0.16)]"
+                  className="flex min-h-[280px] flex-col rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.16),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.35)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 hover:shadow-[0_25px_70px_rgba(255,90,0,0.16)] sm:p-7"
                 >
                   <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff5a00]">{group.title}</p>
                   <p className="mt-4 text-sm leading-7 text-white/68">{group.description}</p>
@@ -688,7 +688,7 @@ export default function App() {
         </section>
 
         <section id="soft-skills" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Soft skills</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
@@ -699,7 +699,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
               {[
                 {
                   title: "Organização",
@@ -728,10 +728,10 @@ export default function App() {
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.14),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-7 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50"
+                  className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.14),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 sm:p-7"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-2xl font-black text-white">{item.title}</h3>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <h3 className="text-xl font-black text-white sm:text-2xl">{item.title}</h3>
                     <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-xs font-bold text-[#ff5a00]">
                       {item.score}
                     </span>
@@ -752,12 +752,12 @@ export default function App() {
         </section>
 
         <section id="curriculo" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-            <div className="rounded-[2rem] border border-[#7c3aed]/30 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.18),transparent_40%),linear-gradient(180deg,#0f0f0f,#070707)] p-10 shadow-[0_30px_90px_rgba(124,58,237,0.12)]">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
+            <div className="rounded-[2rem] border border-[#7c3aed]/30 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.18),transparent_40%),linear-gradient(180deg,#0f0f0f,#070707)] p-6 shadow-[0_30px_90px_rgba(124,58,237,0.12)] sm:p-8 lg:p-10">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#a78bfa]">
                 Currículo
               </p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Currículo pronto para download
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
@@ -776,7 +776,7 @@ export default function App() {
         </section>
 
         <section id="formacao" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Formação acadêmica</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
@@ -784,7 +784,7 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {[
                 {
                   title: "Inglês avançado",
@@ -813,14 +813,14 @@ export default function App() {
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.14),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-7 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50"
+                  className="rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.14),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.1),0_20px_60px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:border-[#ff5a00]/50 sm:p-7"
                 >
-                  <div className="flex items-start justify-between gap-4">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff5a00]">
                         {item.status}
                       </p>
-                      <h3 className="mt-4 text-2xl font-black text-white">{item.title}</h3>
+                      <h3 className="mt-4 text-xl font-black text-white sm:text-2xl">{item.title}</h3>
                       <p className="mt-3 text-sm font-semibold text-white/55">{item.subtitle}</p>
                     </div>
                     <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-xs font-bold text-[#ff5a00]">
@@ -836,16 +836,16 @@ export default function App() {
         </section>
 
         <section id="contato" className="bg-[#050505]">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-            <div className="rounded-[2rem] border border-[#ff5a00]/30 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.2),transparent_40%),linear-gradient(180deg,#0f0f0f,#070707)] p-10 shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
+            <div className="rounded-[2rem] border border-[#ff5a00]/30 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.2),transparent_40%),linear-gradient(180deg,#0f0f0f,#070707)] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.45)] sm:p-8 lg:p-10">
               <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Contato</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Vamos conversar?
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
                 Estou disponível para novos projetos e oportunidades. Entre em contato!
               </p>
-              <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(2,minmax(0,1fr))_minmax(0,1.3fr)]">
                 <a
                   href="https://github.com/AmandaReiz"
                   target="_blank"
@@ -872,7 +872,7 @@ export default function App() {
                     window.setTimeout(() => setEmailCopied(false), 1600);
                   }}
                   aria-label="Copiar email amandareis401@gmail.com"
-                  className="group rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-left text-sm font-bold text-white transition hover:border-[#ff5a00] hover:text-[#ff5a00] sm:col-span-2 xl:col-span-2"
+                  className="group rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-left text-sm font-bold text-white transition hover:border-[#ff5a00] hover:text-[#ff5a00] sm:col-span-2 lg:col-span-1"
                 >
                   <span>Email</span>
                   <span className="mt-2 block select-all text-sm font-medium text-white/45 group-hover:text-white/70">
