@@ -19,30 +19,26 @@ const skillGroups = [
   {
     title: "Back-end",
     description: "Base para APIs, serviços e regras de negócio com foco em Java.",
-    items: ["Java", "Spring Boot", "Spring Cloud", "Node.js", "GraphQL", "PHP", "Laravel"],
+    items: ["Java", "Spring Boot", "Spring Cloud", "Node.js", "Python básico"],
   },
   {
     title: "Frameworks & Bibliotecas",
     description: "Ferramentas que apoiam comunicação, dados, containers e persistência.",
-    items: ["Kafka", "WebSockets", "Redis", "Docker", "AWS", "MySQL", "ORM"],
+    items: ["Kafka", "WebSockets", "Redis", "Docker", "Noções de Cloud (AWS/Azure)", "MySQL", "ORM"],
   },
   {
     title: "Arquitetura",
     description: "Práticas para construir sistemas escaláveis, resilientes e bem integrados.",
-    items: ["Microserviços", "Sistemas orientados a eventos", "CI/CD", "Kubernetes"],
+    items: ["Microserviços", "Sistemas orientados a eventos", "CI/CD", "Uso de IA para automatizar processos (GitHub Copilot, Claude Code)"],
   },
   {
     title: "Conhecimentos técnicos",
     description: "Pontos que resumem minha base de desenvolvimento e arquitetura.",
     items: [
       "APIs REST",
-      "Microsserviços",
-      "Testes unitários",
-      "Docker",
-      "Design Patterns",
+      "Testes (JUnit) + Mockito",
       "SOLID",
       "Clean Code",
-      "Arquitetura de Software",
       "CI/CD",
     ],
   },
@@ -50,7 +46,7 @@ const skillGroups = [
 
 const projects = [
   {
-    title: "HelpdeskCloud-AWS",
+    title: "Chamados de TI (HelpDeskCloud)",
     category: "Full Stack",
     stack: [
       "Java",
