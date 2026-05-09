@@ -359,11 +359,10 @@ export default function App() {
                 </span>
               </p>
               <p className="mt-8 max-w-2xl text-base leading-8 text-justify text-white/72 sm:text-lg">
-                Sou desenvolvedora backend Java com domínio fullstack, movida por desafios reais e pela resolução de problemas.
-                Gosto de transformar necessidades complexas em soluções claras, funcionais e bem estruturadas,
-                unindo lógica, criatividade e atenção aos detalhes. Tenho experiência em desenvolver APIs REST,
-                estruturar backends com Java e Spring Boot, integrar sistemas em tempo real com WebSocket,
-                trabalhar com Redis, Docker e bancos de dados, além de construir interfaces React conectadas a serviços robustos.
+                Desenvolvedora com foco em backend Java e experiência prática em projetos fullstack.
+                Construí sistemas com Spring Boot, autenticação JWT, WebSockets em tempo real, Redis e Docker
+                conectados a interfaces React. Busco meu primeiro estágio em desenvolvimento de software para
+                aplicar e evoluir essa base em um ambiente real, com preferência por Java ou JavaScript.
               </p>
 
               <div className="mt-10 flex flex-col gap-5">
