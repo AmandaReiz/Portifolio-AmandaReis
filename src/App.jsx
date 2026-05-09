@@ -721,7 +721,7 @@ export default function App() {
                     "Sou focada em resultados. Estudo além do currículo da faculdade porque quero crescer rápido na carreira de tecnologia.",
                 },
                 {
-                  title: "Estabilidade",
+                  title: "Resiliência com erros - Estabilidade emocional",
                   score: "82,3%",
                   detail:
                     "Mantenho a calma para resolver problemas e erros de código, sem me deixar abater quando algo não funciona de primeira.",
