@@ -24,7 +24,7 @@ const skillGroups = [
   {
     title: "Frameworks & Bibliotecas",
     description: "Ferramentas que apoiam comunicação, dados, containers e persistência.",
-    items: ["Kafka", "WebSockets", "Redis", "Docker", "Noções de Cloud (AWS/Azure)", "MySQL", "ORM"],
+    items: ["WebSockets", "Docker", "Noções de Cloud (AWS/Azure)", "MySQL", "ORM"],
   },
   {
     title: "Arquitetura",
@@ -362,11 +362,7 @@ export default function App() {
                 Sou <span className="inline-block whitespace-nowrap text-[#ff5a00]">Amanda Reis</span>
               </h1>
               <p className="mt-4 min-h-[2.3rem] text-lg font-bold text-[#ff5a00] sm:min-h-[2.6rem] sm:text-xl md:text-2xl">
-                Desenvolvedora{" "}
-                <span className="inline-flex min-w-[12ch] items-center text-white/90">
-                  {typedRole}
-                  <span className="type-caret" />
-                </span>
+                Desenvolvedora Backend
               </p>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-left text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg">
                 Desenvolvedora com foco em backend Java e experiência prática em projetos fullstack.
@@ -384,7 +380,7 @@ export default function App() {
                     Ver projetos
                   </a>
                   <a
-                    href="/curriculo-amanda-reis-v9.pdf"
+                    href="/curriculo-amanda-reis-v10.pdf"
                     download
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-6 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.14)] backdrop-blur transition hover:-translate-y-1 hover:scale-[1.02] hover:border-[#8b5cf6] hover:bg-[#7c3aed]/28 hover:shadow-[0_18px_50px_rgba(124,58,237,0.28)] sm:w-auto sm:px-8"
                   >
@@ -775,7 +771,7 @@ export default function App() {
                 competências técnicas e links profissionais.
               </p>
               <a
-                href="/curriculo-amanda-reis-v9.pdf"
+                href="/curriculo-amanda-reis-v10.pdf"
                 download
                 className="mt-8 inline-flex rounded-full bg-[#7c3aed] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#8b5cf6]"
               >
