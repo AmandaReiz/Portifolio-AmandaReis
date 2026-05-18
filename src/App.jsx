@@ -141,51 +141,11 @@ const filters = [
 
 export default function App() {
   const [activeFilter, setActiveFilter] = useState("Todos");
-  const [typedRole, setTypedRole] = useState("");
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [headerHovered, setHeaderHovered] = useState(false);
-
-  useEffect(() => {
-    const roles = ["fullstack", "backend", "front-end"];
-    let roleIndex = 0;
-    let roleText = "";
-    let deleting = false;
-    let timeoutId;
-
-    const step = () => {
-      const currentRole = roles[roleIndex];
-      const typingDelay = deleting ? 38 : 58;
-
-      if (!deleting) {
-        if (roleText.length < currentRole.length) {
-          roleText = currentRole.slice(0, roleText.length + 1);
-          setTypedRole(roleText);
-        } else {
-          timeoutId = window.setTimeout(() => {
-            deleting = true;
-            step();
-          }, 1000);
-          return;
-        }
-      } else {
-        if (roleText.length > 0) {
-          roleText = roleText.slice(0, -1);
-          setTypedRole(roleText);
-        } else {
-          deleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-        }
-      }
-
-      timeoutId = window.setTimeout(step, typingDelay);
-    };
-
-    step();
-    return () => window.clearTimeout(timeoutId);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -372,7 +332,7 @@ export default function App() {
                 Sou <span className="inline-block whitespace-nowrap text-[#ff5a00]">Amanda Reis</span>
               </h1>
               <p className="mt-4 min-h-[2.3rem] text-lg font-bold text-[#ff5a00] sm:min-h-[2.6rem] sm:text-xl md:text-2xl">
-                Desenvolvedora Backend
+                Desenvolvedora <span className="text-white">Fullstack</span>
               </p>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-left text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg">
                 Desenvolvedora fullstack com experiência prática em aplicações web, APIs REST e integração entre
