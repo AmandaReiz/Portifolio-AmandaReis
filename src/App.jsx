@@ -375,10 +375,11 @@ export default function App() {
                 Desenvolvedora Backend
               </p>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-left text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg">
-                Desenvolvedora com foco em backend Java e experiência prática em projetos fullstack.
-                Construí sistemas com Spring Boot, autenticação JWT, WebSockets em tempo real, Redis e Docker
-                conectados a interfaces React. Busco meu primeiro estágio em desenvolvimento de software para
-                aplicar e evoluir essa base em um ambiente real, com preferência por Java ou JavaScript.
+                Desenvolvedora fullstack com experiência prática em aplicações web, APIs REST e integração entre
+                front-end e back-end. Tenho conhecimento em Node.js, Express, React, TypeScript, Next.js, HTML,
+                CSS e JavaScript, além de atuação com PostgreSQL, MySQL e controle de versão com Git. Busco meu
+                primeiro estágio em desenvolvimento para aplicar essa base técnica, evoluir em projetos reais e
+                contribuir com soluções bem estruturadas.
               </p>
 
               <div className="mt-8 flex flex-col gap-5 sm:mt-10">
