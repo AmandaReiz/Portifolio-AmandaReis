@@ -46,6 +46,16 @@ const skillGroups = [
 
 const projects = [
   {
+    title: "Conversor de Moedas",
+    category: "Front-end",
+    stack: ["HTML", "CSS", "JavaScript"],
+    description:
+      "Aplicação web para conversão de moedas com interface responsiva, foco em experiência de uso e integração de lógica JavaScript para cálculos e exibição dinâmica dos valores convertidos.",
+    previewUrl: "https://conversor-de-moedas-internacional.vercel.app",
+    repositoryUrl: "https://github.com/AmandaReiz/conversor-de-moedas.git",
+    imageUrl: "/prints/conversor-de-moedas.png",
+  },
+  {
     title: "Chamados de TI (HelpDeskCloud)",
     category: "Full Stack",
     stack: [
@@ -98,16 +108,6 @@ const projects = [
     previewUrl: "https://lnkd.in/dfyStsiZ",
     repositoryUrl: "https://github.com/AmandaReiz/api-estoque",
     imageUrl: "/prints/API-controle-de-estoque.png",
-  },
-  {
-    title: "Conversor de Moedas",
-    category: "Front-end",
-    stack: ["HTML", "CSS", "JavaScript"],
-    description:
-      "Aplicação web para conversão de moedas com interface responsiva, foco em experiência de uso e integração de lógica JavaScript para cálculos e exibição dinâmica dos valores convertidos.",
-    previewUrl: "https://conversor-de-moedas-internacional.vercel.app",
-    repositoryUrl: "https://github.com/AmandaReiz/conversor-de-moedas.git",
-    imageUrl: "/prints/conversor-de-moedas.png",
   },
 ];
 
