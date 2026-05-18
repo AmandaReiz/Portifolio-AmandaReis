@@ -149,7 +149,7 @@ export default function App() {
   const [headerHovered, setHeaderHovered] = useState(false);
 
   useEffect(() => {
-    const roles = ["full-stack", "backend", "front end"];
+    const roles = ["fullstack", "backend", "front-end"];
     let roleIndex = 0;
     let roleText = "";
     let deleting = false;
