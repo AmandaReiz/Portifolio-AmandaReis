@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Sobre", href: "#sobre" },
   { label: "Projetos", href: "#projetos" },
   { label: "Minhas Habilidades", href: "#habilidades" },
   { label: "Soft Skills", href: "#soft-skills" },
@@ -335,11 +334,11 @@ export default function App() {
                 Desenvolvedora <span className="text-white">Fullstack</span>
               </p>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-left text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg">
-                Desenvolvedora fullstack com experiência prática em aplicações web, APIs REST e integração entre
-                front-end e back-end. Tenho conhecimento em Node.js, Express, React, TypeScript, Next.js, HTML,
-                CSS e JavaScript, além de atuação com PostgreSQL, MySQL e controle de versão com Git. Busco meu
-                primeiro estágio em desenvolvimento para aplicar essa base técnica, evoluir em projetos reais e
-                contribuir com soluções bem estruturadas.
+                Estou no segundo período da faculdade de Análise e Desenvolvimento de Sistemas e tenho experiência
+                prática em aplicações web, APIs REST e integração entre front-end e back-end. Tenho conhecimento em
+                Node.js, Express, React, TypeScript, Next.js, HTML, CSS e JavaScript, além de atuação com
+                PostgreSQL, MySQL e controle de versão com Git. Busco meu primeiro estágio em desenvolvimento para
+                aplicar essa base técnica, evoluir em projetos reais e contribuir com soluções bem estruturadas.
               </p>
 
               <div className="mt-8 flex flex-col gap-5 sm:mt-10">
@@ -421,7 +420,7 @@ export default function App() {
             </div>
 
             <a
-              href="#sobre"
+              href="#projetos"
               className="scroll-hint absolute bottom-5 left-1/2 z-10 hidden -translate-x-1/2 rounded-full border border-white/10 bg-black/45 px-4 py-2 text-xs font-semibold tracking-[0.25em] text-white/70 transition hover:border-[#ff5a00] hover:text-[#ff5a00] sm:bottom-8 sm:inline-flex"
             >
               <span className="inline-flex items-center gap-2">
@@ -431,44 +430,6 @@ export default function App() {
                 scroll
               </span>
             </a>
-          </div>
-        </section>
-
-        <section id="sobre" className="border-b border-white/8 bg-[#080808]">
-          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
-            <div className="group rounded-[2rem] border border-[#ff5a00]/18 bg-[radial-gradient(circle_at_top,rgba(255,90,0,0.12),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.08),0_20px_60px_rgba(0,0,0,0.35)] transition hover:border-[#ff5a00]/50 hover:shadow-[0_28px_90px_rgba(255,90,0,0.22),0_20px_60px_rgba(0,0,0,0.4)] sm:p-6 lg:p-8">
-              <div className="grid gap-8 md:gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-                <div className="flex justify-center lg:justify-start">
-                  <div className="relative flex size-[min(82vw,280px)] items-center justify-center overflow-hidden rounded-[2rem] border border-[#ff5a00]/35 bg-[linear-gradient(145deg,#111,#050505)] shadow-[0_25px_80px_rgba(255,90,0,0.18)] transition group-hover:shadow-[0_25px_100px_rgba(255,90,0,0.38)] sm:size-[320px]">
-                    <div className="pointer-events-none absolute inset-4 rounded-[1.6rem] border border-white/8" />
-                    <div className="absolute inset-4 overflow-hidden rounded-[1.6rem]">
-                      <img
-                        src="/foto2.jpg"
-                        alt="Retrato de Amanda Reis"
-                        className="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#ff5a00]">Sobre mim</p>
-                  <p className="mt-6 max-w-2xl text-base leading-8 text-left text-white/70 sm:text-lg">
-                    Estou no segundo período da faculdade de Análise e Desenvolvimento de Sistemas e já tenho
-                    experiência com informática, o que me deu base para lidar com ferramentas, lógica e resolução de
-                    problemas no dia a dia. Busco minha primeira oportunidade de estágio para continuar aprendendo,
-                    crescer na área e contribuir com solução, responsabilidade e vontade de evoluir. Nas horas vagas,
-                    componho músicas no violão e adoro resolver cubos mágicos.
-                  </p>
-              <a
-                href="#contato"
-                className="mt-8 inline-flex w-full justify-center rounded-full bg-[#ff5a00] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#ff6a00] sm:w-auto"
-              >
-                Contato
-              </a>
-            </div>
-          </div>
-            </div>
           </div>
         </section>
 
