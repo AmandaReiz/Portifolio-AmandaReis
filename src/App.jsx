@@ -141,6 +141,7 @@ const projects = [
     backendUrl: "https://controle-gastos-jwt-api.vercel.app/api/health",
     backendLabel: "API/JWT",
     repositoryUrl: "https://github.com/AmandaReiz/controle-gastos-pessoais",
+    imageUrl: "/prints/financas.png",
   },
 ];
 
