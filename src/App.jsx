@@ -80,6 +80,20 @@ const projects = [
     imageUrl: "/prints/conversor-de-moedas.png",
   },
   {
+    title: "Controle de Gastos Pessoais",
+    category: "Full Stack JavaScript",
+    emoji: "💰",
+    stack: ["Node.js", "Express", "React", "Vite", "JWT", "PostgreSQL", "Recharts", "Vercel"],
+    description:
+      "Aplicação full stack para controle de gastos pessoais com login JWT, dashboard financeiro em React, cadastro de despesas, categorias, gráficos, metas editáveis e API Node.js preparada para PostgreSQL.",
+    frontendUrl: "https://controle-gastos-dashboard.vercel.app",
+    frontendLabel: "Dashboard",
+    backendUrl: "https://controle-gastos-jwt-api.vercel.app/api/health",
+    backendLabel: "API/JWT",
+    repositoryUrl: "https://github.com/AmandaReiz/controle-gastos-pessoais",
+    imageUrl: "/prints/financas.png",
+  },
+  {
     title: "Chamados de TI (HelpDeskCloud)",
     category: "Full Stack",
     emoji: "🛠️",
@@ -128,20 +142,6 @@ const projects = [
     previewLabel: "Backend/API",
     repositoryUrl: "https://github.com/AmandaReiz/api-estoque",
     imageUrl: "/prints/API-controle-de-estoque.png",
-  },
-  {
-    title: "Controle de Gastos Pessoais",
-    category: "Full Stack JavaScript",
-    emoji: "💰",
-    stack: ["Node.js", "Express", "React", "Vite", "JWT", "PostgreSQL", "Recharts", "Vercel"],
-    description:
-      "Aplicação full stack para controle de gastos pessoais com login JWT, dashboard financeiro em React, cadastro de despesas, categorias, gráficos, metas editáveis e API Node.js preparada para PostgreSQL.",
-    frontendUrl: "https://controle-gastos-dashboard.vercel.app",
-    frontendLabel: "Dashboard",
-    backendUrl: "https://controle-gastos-jwt-api.vercel.app/api/health",
-    backendLabel: "API/JWT",
-    repositoryUrl: "https://github.com/AmandaReiz/controle-gastos-pessoais",
-    imageUrl: "/prints/financas.png",
   },
 ];
 
