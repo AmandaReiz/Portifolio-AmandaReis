@@ -129,6 +129,19 @@ const projects = [
     repositoryUrl: "https://github.com/AmandaReiz/api-estoque",
     imageUrl: "/prints/API-controle-de-estoque.png",
   },
+  {
+    title: "Controle de Gastos Pessoais",
+    category: "Full Stack JavaScript",
+    emoji: "💰",
+    stack: ["Node.js", "Express", "React", "Vite", "JWT", "PostgreSQL", "Recharts", "Vercel"],
+    description:
+      "Aplicação full stack para controle de gastos pessoais com login JWT, dashboard financeiro em React, cadastro de despesas, categorias, gráficos, metas editáveis e API Node.js preparada para PostgreSQL.",
+    frontendUrl: "https://controle-gastos-dashboard.vercel.app",
+    frontendLabel: "Dashboard",
+    backendUrl: "https://controle-gastos-jwt-api.vercel.app/api/health",
+    backendLabel: "API/JWT",
+    repositoryUrl: "https://github.com/AmandaReiz/controle-gastos-pessoais",
+  },
 ];
 
 const filters = [
@@ -146,6 +159,9 @@ const filters = [
   "WebSockets",
   "Redis",
   "Swagger",
+  "Vite",
+  "Recharts",
+  "Vercel",
 ];
 
 const softSkills = [
@@ -782,7 +798,7 @@ export default function App() {
                           <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M7 17 17 7" />
                             <path d="M7 7h10v10" />
-                          </svg>{project.backendLabel ?? "Backend/API"}</a>
+                          </svg>{project.frontendLabel ?? "Frontend"}</a>
                       ) : null}
                       {project.backendUrl ? (
                         <a
@@ -794,7 +810,7 @@ export default function App() {
                           <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M7 17 17 7" />
                             <path d="M7 7h10v10" />
-                          </svg>{project.frontendLabel ?? "Frontend"}</a>
+                          </svg>{project.backendLabel ?? "Backend/API"}</a>
                       ) : null}
                       {project.videoUrl ? (
                         <a
