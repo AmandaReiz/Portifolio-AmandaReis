@@ -358,6 +358,20 @@ html::-webkit-scrollbar-thumb {
     scroll-padding-top: 78px;
   }
 
+  .project-card {
+    background:
+      linear-gradient(180deg, rgba(20, 20, 20, 0.94), rgba(10, 10, 10, 0.9)) !important;
+    border-color: rgba(255, 90, 0, 0.22);
+  }
+
+  .project-card p,
+  .project-card h3,
+  .project-card span,
+  .project-card a,
+  .project-card button {
+    opacity: 1 !important;
+  }
+
   .hero-star {
     opacity: 0.75;
   }

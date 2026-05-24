@@ -698,12 +698,8 @@ export default function App() {
           </div>
         </section>
 
-        <motion.section
+        <section
           id="projetos"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.18 }}
-          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
           className="border-b border-white/8 bg-[#080808]"
         >
           <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
@@ -738,10 +734,9 @@ export default function App() {
                 {filteredProjects.map((project, index) => (
                   <motion.article
                     key={project.title}
-                    variants={{
-                      hidden: { opacity: 0, y: 36, scale: 0.98 },
-                      visible: { opacity: 1, y: 0, scale: 1 },
-                    }}
+                    initial={{ opacity: 0, y: 36, scale: 0.98 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.18 }}
                     transition={{ duration: 0.46, ease: "easeOut", delay: index * 0.02 }}
                     className="project-card group relative overflow-hidden rounded-[2rem] border border-[#ff5a00]/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-[0_22px_70px_rgba(255,90,0,0.08),0_20px_60px_rgba(0,0,0,0.32)] sm:p-7"
                   >
@@ -843,7 +838,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         <section id="habilidades" className="border-b border-white/8 bg-[#060606]">
           <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
