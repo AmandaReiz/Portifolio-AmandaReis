@@ -68,6 +68,18 @@ const skillGroups = [
 
 const projects = [
   {
+    title: "MetaClara.ia",
+    category: "React + IA",
+    emoji: "🎯",
+    stack: ["React", "TypeScript", "Vite", "Gemini API", "LocalStorage", "Vercel"],
+    description:
+      "Planejador financeiro inteligente que simula metas pessoais, calcula viabilidade, salva histórico local e gera recomendações personalizadas com apoio da IA Gemini.",
+    previewUrl: "https://metaclara-ia.vercel.app",
+    previewLabel: "Aplicação",
+    repositoryUrl: "https://github.com/AmandaReiz/metaclara-ia",
+    imageUrl: "/prints/metaclara-ia.png",
+  },
+  {
     title: "Conversor de Moedas",
     category: "Front-end",
     emoji: "💱",
@@ -587,12 +599,10 @@ export default function App() {
                 transition={{ delay: 0.3, duration: 0.68 }}
                 className="mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg"
               >
-                Desenvolvedora fullstack com experiência prática em aplicações web, APIs REST e integração entre
-                front-end e back-end. Estou no segundo período da faculdade de Análise e Desenvolvimento de Sistemas
-                e tenho conhecimento em Node.js, Express, React, TypeScript, Next.js, HTML, CSS e JavaScript, além
-                de atuação com PostgreSQL, MySQL e controle de versão com Git. Busco meu primeiro estágio em
-                desenvolvimento para aplicar essa base técnica, evoluir em projetos reais e contribuir com soluções
-                bem estruturadas.
+                Desenvolvedora fullstack em formação, com foco em Node.js, React, TypeScript, APIs REST e integração
+                entre front-end e back-end. Atualmente curso Análise e Desenvolvimento de Sistemas e atuo como
+                estagiária de TI/Desenvolvimento de Software no CRCRJ, aplicando minha base técnica em sistemas,
+                testes, suporte e evolução de soluções reais.
               </motion.p>
 
               <motion.div
