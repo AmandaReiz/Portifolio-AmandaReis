@@ -258,12 +258,12 @@ const formationItems = [
     detail: "Estudos práticos em backend com Node.js, estrutura de aplicações e integração com serviços.",
   },
   {
-    title: "Santander Bootcamp 2026 - 1º semestre",
-    subtitle: "Santander Open Academy",
-    period: "25 de mai de 2026 - 25 de ago de 2026",
+    title: "Santander 2026 - AI React Front-end",
+    subtitle: "Santander Open Academy + DIO",
+    period: "jul de 2026",
     status: "Bootcamp",
-    badge: "Selecionada",
-    detail: "Programa voltado ao aprofundamento técnico, aprendizado contínuo e aceleração de carreira em tecnologia.",
+    badge: "Concluído",
+    detail: "Bootcamp focado em React e front-end com inteligência artificial, promovido pelo Santander em parceria com a DIO.",
   },
 ];
 
