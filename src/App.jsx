@@ -591,7 +591,7 @@ export default function App() {
                 transition={{ delay: 0.22, duration: 0.62 }}
                 className="mt-4 text-lg font-bold text-[#ff7a00] sm:text-xl md:text-2xl"
               >
-                Desenvolvedora <span className="text-white">Fullstack</span>
+                Desenvolvedora <span className="text-white">Front-end</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 24 }}
@@ -599,10 +599,11 @@ export default function App() {
                 transition={{ delay: 0.3, duration: 0.68 }}
                 className="mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg"
               >
-                Desenvolvedora fullstack em formação, com foco em Node.js, React, TypeScript, APIs REST e integração
-                entre front-end e back-end. Atualmente curso Análise e Desenvolvimento de Sistemas e atuo como
-                estagiária de TI/Desenvolvimento de Software no CRCRJ, aplicando minha base técnica em sistemas,
-                testes, suporte e evolução de soluções reais.
+                Desenvolvedora em formação com foco em Front-end, JavaScript, React e Node.js. Curso Análise e
+                Desenvolvimento de Sistemas e atuo como Estagiária de TI no CRCRJ, onde aplico minha base técnica em
+                suporte a sistemas, testes, atendimento a chamados e evolução de soluções reais. Busco oportunidades como
+                Desenvolvedora Front-end Júnior ou JavaScript Júnior, unindo experiência prática em TI com projetos web
+                publicados.
               </motion.p>
 
               <motion.div
