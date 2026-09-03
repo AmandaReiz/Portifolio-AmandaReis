@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const navItems = [
   { label: "Home", href: "#home" },
+  { label: "Experiência", href: "#experiencia" },
   { label: "Projetos", href: "#projetos" },
   { label: "Minhas Habilidades", href: "#habilidades" },
   { label: "Soft Skills", href: "#soft-skills" },
@@ -599,11 +600,11 @@ export default function App() {
                 transition={{ delay: 0.3, duration: 0.68 }}
                 className="mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg"
               >
-                Desenvolvedora em formação com foco em Front-end, JavaScript, React e Node.js. Curso Análise e
-                Desenvolvimento de Sistemas e atuo como Estagiária de TI no CRCRJ, onde aplico minha base técnica em
-                suporte a sistemas, testes, atendimento a chamados e evolução de soluções reais. Busco oportunidades como
-                Desenvolvedora Front-end Júnior ou JavaScript Júnior, unindo experiência prática em TI com projetos web
-                publicados.
+                Desenvolvedora em formação, cursando Análise e Desenvolvimento de Sistemas, com experiência prática
+                como Estagiária de TI no CRCRJ. Tenho atuado com testes de sistemas, atendimento a chamados, registros
+                técnicos e apoio à evolução de soluções reais. Atualmente direciono meus estudos para Python, SQL,
+                automação, APIs e fundamentos de Cloud/AWS, buscando oportunidades em desenvolvimento, automação ou
+                análise de sistemas júnior.
               </motion.p>
 
               <motion.div
@@ -706,6 +707,58 @@ export default function App() {
                 scroll
               </span>
             </a>
+          </div>
+        </section>
+
+        <section id="experiencia" className="border-b border-white/8 bg-[#070707]">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
+            <SectionHeading
+              eyebrow="Experiência profissional"
+              title="Vivência real em Suporte/TI no CRCRJ"
+              description="Minha experiência atual une atendimento ao usuário, testes de sistemas, manutenção técnica e registro organizado de demandas em um ambiente corporativo real."
+            />
+
+            <motion.article
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.24 }}
+              transition={{ duration: 0.5 }}
+              className="mt-10 rounded-[2rem] border border-[#ff5a00]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.36)] sm:p-7 lg:p-8"
+            >
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff8a3d]">CRCRJ</p>
+                  <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+                    Estagiária de Suporte/TI
+                  </h3>
+                  <p className="mt-3 max-w-3xl text-base leading-7 text-white/68">
+                    Conselho Regional de Contabilidade do Rio de Janeiro, com atuação em suporte ao usuário,
+                    manutenção técnica, testes de programas e apoio às rotinas internas de tecnologia.
+                  </p>
+                </div>
+
+                <div className="rounded-[1.4rem] border border-white/10 bg-black/28 px-4 py-3 text-sm font-semibold text-white/72">
+                  <span className="block text-xs uppercase tracking-[0.22em] text-white/42">Período</span>
+                  <strong className="mt-1 block text-white">25/06/2026 - 26/06/2027</strong>
+                </div>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  "Auxiliar no suporte ao usuário.",
+                  "Manutenção de computadores.",
+                  "Acompanhamento de testes e programas.",
+                  "Manutenção de hardware e software.",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[1.4rem] border border-white/10 bg-white/[0.035] p-4 text-sm font-semibold leading-6 text-white/76"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.article>
           </div>
         </section>
 
