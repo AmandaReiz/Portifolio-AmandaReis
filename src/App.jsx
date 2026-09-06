@@ -77,7 +77,7 @@ const projects = [
       "Painel web desenvolvido para centralizar dados das impressoras do CRCRJ, acessar IPs rapidamente e automatizar mensagens de solicitação de toner ou suporte técnico. Projeto real com React, Node.js, JavaScript e Playwright aplicado à rotina de Suporte/TI.",
     videoUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7501612225678340097/",
     videoLabel: "Post LinkedIn",
-    imageUrl: "/prints/painel-impressoras-crcrj.png",
+    imageUrl: "/prints/impressoras.jpg",
   },
   {
     title: "MetaClara.ia",
@@ -224,6 +224,21 @@ const softSkills = [
   },
 ];
 
+function getCurrentExperiencePeriod() {
+  const startDate = new Date(2026, 5, 25);
+  const today = new Date();
+  let months = (today.getFullYear() - startDate.getFullYear()) * 12 + today.getMonth() - startDate.getMonth();
+
+  if (today.getDate() < startDate.getDate()) {
+    months -= 1;
+  }
+
+  const safeMonths = Math.max(0, months);
+  const monthLabel = safeMonths === 1 ? "1 mês" : `${safeMonths} meses`;
+
+  return `${monthLabel} - atual`;
+}
+
 const formationItems = [
   {
     title: "Informática",
@@ -358,6 +373,7 @@ export default function App() {
   const [headerHovered, setHeaderHovered] = useState(false);
   const formacaoRef = useRef(null);
   const reduceMotion = useReducedMotion();
+  const experiencePeriod = useMemo(() => getCurrentExperiencePeriod(), []);
 
   const { scrollYProgress, scrollY } = useScroll();
   const progressScale = useSpring(scrollYProgress, { stiffness: 140, damping: 28, mass: 0.2 });
@@ -714,7 +730,7 @@ export default function App() {
             </motion.div>
 
             <a
-              href="#projetos"
+              href="#experiencia"
               className="scroll-hint absolute bottom-5 left-1/2 z-10 hidden -translate-x-1/2 rounded-full border border-white/10 bg-black/35 px-4 py-2 text-xs font-semibold tracking-[0.25em] text-white/70 backdrop-blur transition hover:border-[#ff5a00] hover:text-[#ff8a3d] sm:inline-flex"
             >
               <span className="inline-flex items-center gap-2">
@@ -738,40 +754,51 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.24 }}
               transition={{ duration: 0.5 }}
-              className="mt-10 rounded-[2rem] border border-[#ff5a00]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.36)] sm:p-7 lg:p-8"
+              className="mx-auto mt-10 max-w-[390px] overflow-hidden rounded-[2rem] border border-[#ff5a00]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.018))] shadow-[0_24px_80px_rgba(0,0,0,0.36)]"
             >
-              <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff8a3d]">CRCRJ</p>
-                  <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
-                    Estagiária de Suporte/TI
-                  </h3>
-                  <p className="mt-3 max-w-3xl text-base leading-7 text-white/68">
-                    Conselho Regional de Contabilidade do Rio de Janeiro, com atuação em suporte ao usuário,
-                    manutenção técnica, testes de programas e apoio às rotinas internas de tecnologia.
-                  </p>
-                </div>
+              <div className="h-2 bg-[linear-gradient(90deg,#ff5a00_0%,#ff8a3d_48%,#7c3aed_100%)]" />
 
-                <div className="rounded-[1.4rem] border border-white/10 bg-black/28 px-4 py-3 text-sm font-semibold text-white/72">
-                  <span className="block text-xs uppercase tracking-[0.22em] text-white/42">Período</span>
-                  <strong className="mt-1 block text-white">25/06/2026 - 26/06/2027</strong>
-                </div>
-              </div>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {[
-                  "Auxiliar no suporte ao usuário.",
-                  "Manutenção de computadores.",
-                  "Acompanhamento de testes e programas.",
-                  "Manutenção de hardware e software.",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.4rem] border border-white/10 bg-white/[0.035] p-4 text-sm font-semibold leading-6 text-white/76"
-                  >
-                    {item}
+              <div className="p-6 sm:p-7">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex size-14 items-center justify-center rounded-2xl border border-[#ff5a00]/30 bg-[#ff5a00]/12 text-lg font-black text-[#ff8a3d]">
+                    TI
                   </div>
-                ))}
+                  <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white/60">
+                    Atual
+                  </span>
+                </div>
+
+                <p className="mt-6 text-xs font-bold uppercase tracking-[0.28em] text-[#ff8a3d]">CRCRJ</p>
+                <h3 className="mt-3 text-2xl font-black leading-tight text-white">
+                  Estagiária de Suporte/TI
+                </h3>
+
+                <div className="mt-5 rounded-[1.3rem] border border-white/10 bg-black/28 px-4 py-3 text-sm font-semibold text-white/72">
+                  <span className="block text-xs uppercase tracking-[0.22em] text-white/42">Período</span>
+                  <strong className="mt-1 block text-white">{experiencePeriod}</strong>
+                </div>
+
+                <p className="mt-5 text-sm leading-7 text-white/68">
+                  Conselho Regional de Contabilidade do Rio de Janeiro, com atuação em suporte ao usuário, manutenção
+                  técnica, testes de programas e apoio às rotinas internas de tecnologia.
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  {[
+                    "Auxiliar no suporte ao usuário.",
+                    "Manutenção de computadores.",
+                    "Acompanhamento de testes e programas.",
+                    "Manutenção de hardware e software.",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 rounded-[1.15rem] border border-white/10 bg-white/[0.035] p-3 text-sm font-semibold leading-6 text-white/76"
+                    >
+                      <span className="mt-2 size-2 shrink-0 rounded-full bg-[#ff5a00]" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.article>
           </div>
