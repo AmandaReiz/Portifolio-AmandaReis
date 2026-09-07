@@ -652,7 +652,7 @@ export default function App() {
                     Ver projetos
                   </a>
                   <a
-                    href="/curriculo-amanda-reis-v10.pdf"
+                    href="/curriculo-amanda-reis-atualizado-v4.pdf"
                     download
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#7c3aed]/70 bg-[#7c3aed]/12 px-6 py-3 text-sm font-bold tracking-wide text-white shadow-[0_14px_40px_rgba(124,58,237,0.16)] backdrop-blur transition hover:-translate-y-1 hover:scale-[1.02] hover:border-[#8b5cf6] hover:bg-[#7c3aed]/26 sm:w-auto sm:px-8"
                   >
@@ -1088,7 +1088,7 @@ export default function App() {
                 PDF focado em estágio de desenvolvimento, com projetos pessoais, formação, competências técnicas e links profissionais.
               </p>
               <a
-                href="/curriculo-amanda-reis-v10.pdf"
+                href="/curriculo-amanda-reis-atualizado-v4.pdf"
                 download
                 className="mt-8 inline-flex rounded-full bg-[#7c3aed] px-8 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-[#8b5cf6]"
               >
