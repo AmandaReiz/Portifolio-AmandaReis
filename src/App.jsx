@@ -18,12 +18,12 @@ const skillGroups = [
     description: "Interfaces modernas, acessíveis e conectadas a serviços reais.",
     accent: "from-[#ff7a00] to-[#7c3aed]",
     items: [
-      { label: "React", level: 90 },
-      { label: "TypeScript", level: 80 },
-      { label: "Next.js", level: 30 },
-      { label: "JavaScript", level: 88 },
-      { label: "HTML", level: 95 },
-      { label: "CSS", level: 92 },
+      { label: "React", level: 92 },
+      { label: "TypeScript", level: 85 },
+      { label: "JavaScript (ES6+)", level: 90 },
+      { label: "Tailwind CSS", level: 88 },
+      { label: "HTML5", level: 95 },
+      { label: "CSS3", level: 92 },
     ],
   },
   {
@@ -31,38 +31,25 @@ const skillGroups = [
     description: "Base para APIs, autenticação, regras de negócio e integração entre sistemas.",
     accent: "from-[#ff5a00] to-[#ff9a3d]",
     items: [
-      { label: "Node.js", level: 100 },
-      { label: "Express", level: 85 },
-      { label: "Java", level: 90 },
-      { label: "Spring Boot", level: 80 },
-      { label: "JWT", level: 82 },
-      { label: "WebSockets", level: 76 },
-    ],
-  },
-  {
-    title: "Dados & Infra",
-    description: "Persistência, versionamento, containers e noções de cloud.",
-    accent: "from-[#ff7a00] to-[#ff5a00]",
-    items: [
-      { label: "PostgreSQL", level: 80 },
+      { label: "Node.js", level: 95 },
+      { label: "Express", level: 88 },
+      { label: "APIs REST", level: 92 },
+      { label: "JWT", level: 85 },
+      { label: "PostgreSQL", level: 82 },
       { label: "MySQL", level: 84 },
-      { label: "Docker", level: 20 },
-      { label: "CI/CD", level: 90 },
-      { label: "Git", level: 90 },
-      { label: "Cloud (AWS/Azure)", level: 10 },
     ],
   },
   {
-    title: "Qualidade de Código",
-    description: "Práticas que deixam a entrega mais confiável, legível e sustentável.",
+    title: "Qualidade & Ferramentas",
+    description: "Práticas e ferramentas que deixam a entrega confiável e sustentável.",
     accent: "from-[#7c3aed] to-[#ff5a00]",
     items: [
-      { label: "APIs REST", level: 90 },
-      { label: "JUnit + Mockito", level: 20 },
-      { label: "SOLID", level: 74 },
-      { label: "Clean Code", level: 82 },
-      { label: "ORM", level: 68 },
-      { label: "GitHub Copilot / Claude Code", level: 84 },
+      { label: "Playwright", level: 85 },
+      { label: "Automação E2E", level: 82 },
+      { label: "Git & GitHub", level: 90 },
+      { label: "CI/CD", level: 80 },
+      { label: "Clean Code", level: 85 },
+      { label: "Vercel Deploy", level: 90 },
     ],
   },
 ];
@@ -92,18 +79,6 @@ const projects = [
     imageUrl: "/prints/metaclara-ia.png",
   },
   {
-    title: "Conversor de Moedas",
-    category: "Front-end",
-    emoji: "💱",
-    stack: ["HTML", "CSS", "JavaScript"],
-    description:
-      "Aplicação web para conversão de moedas com interface responsiva, foco em experiência de uso e integração de lógica JavaScript para cálculos e exibição dinâmica dos valores convertidos.",
-    previewUrl: "https://conversor-de-moedas-internacional.vercel.app",
-    previewLabel: "Frontend",
-    repositoryUrl: "https://github.com/AmandaReiz/conversor-de-moedas.git",
-    imageUrl: "/prints/conversor-de-moedas.png",
-  },
-  {
     title: "Controle de Gastos Pessoais",
     category: "Full Stack JavaScript",
     emoji: "💰",
@@ -116,44 +91,6 @@ const projects = [
     backendLabel: "API/JWT",
     repositoryUrl: "https://github.com/AmandaReiz/controle-gastos-pessoais",
     imageUrl: "/prints/financas.png",
-  },
-  {
-    title: "Chamados de TI (HelpDeskCloud)",
-    category: "Full Stack",
-    emoji: "🛠️",
-    stack: ["Java", "Spring Boot", "Next.js", "JWT", "PostgreSQL", "Flyway", "Swagger", "JUnit", "Mockito", "GitHub Actions", "Docker"],
-    description:
-      "Sistema de chamados de TI full stack com backend em Java e Spring Boot, autenticação JWT, CRUD completo de tickets, documentação com Swagger, PostgreSQL com versionamento via Flyway, testes de integração e pipeline CI/CD no GitHub Actions.",
-    videoUrl: "https://youtu.be/91B6W1OSDTA",
-    repositoryUrl: "https://github.com/AmandaReiz/HelpdeskCloud-AWS",
-    imageUrl: "/prints/print-helpdesk.png",
-  },
-  {
-    title: "PulseNotify",
-    category: "Real-time",
-    emoji: "🔔",
-    stack: ["Java", "Spring Boot", "React", "WebSockets", "Redis", "Docker"],
-    description:
-      "Sistema de notificações em tempo real com backend em Java e Spring Boot, comunicação instantânea via WebSocket, cache de notificações recentes com Redis e frontend em React simulando um painel operacional para envio e recebimento de eventos.",
-    frontendUrl: "https://frontend-pi-seven-55.vercel.app",
-    frontendLabel: "Frontend",
-    backendUrl: "https://pulsenotify-sistema-de-notifica-es-em-843h.onrender.com/api/notifications/status",
-    backendLabel: "Backend/API",
-    videoUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7455054272032985088/",
-    repositoryUrl: "https://github.com/AmandaReiz/PulseNotify-Sistema-de-notifica-es-em-tempo-real",
-    imageUrl: "/prints/PulseNotify.png",
-  },
-  {
-    title: "Gerador de Dietas",
-    category: "Spring Boot",
-    emoji: "🥗",
-    stack: ["Java", "Spring Boot", "Spring Web", "OpenFeign", "HTML", "CSS", "JavaScript"],
-    description:
-      "Aplicação web em Spring Boot com interface em HTML, CSS e JS para gerar dietas personalizadas com base em informações corporais e planos diários.",
-    previewUrl: "https://youtu.be/Xviru4PEUqU",
-    previewLabel: "Vídeo",
-    repositoryUrl: "https://github.com/AmandaReiz/Gerador-de-dietas-SpringBoot",
-    imageUrl: "/prints/gerador-de-dietas-print.png",
   },
   {
     title: "API de Controle de Estoque",
@@ -171,24 +108,17 @@ const projects = [
 
 const filters = [
   "Todos",
-  "JavaScript",
-  "Java",
-  "Spring Boot",
-  "Node.js",
   "React",
   "TypeScript",
-  "Next.js",
+  "JavaScript",
+  "Node.js",
+  "Express",
   "PostgreSQL",
   "MySQL",
-  "Docker",
-  "JWT",
-  "WebSockets",
-  "Redis",
-  "Swagger",
-  "Vite",
-  "Recharts",
   "Playwright",
   "Automação",
+  "JWT",
+  "Vite",
   "APIs",
   "Vercel",
 ];
@@ -623,7 +553,7 @@ export default function App() {
                 transition={{ delay: 0.22, duration: 0.62 }}
                 className="mt-4 text-lg font-bold text-[#ff7a00] sm:text-xl md:text-2xl"
               >
-                Desenvolvedora <span className="text-white">Web</span>
+                Desenvolvedora <span className="text-white">Full Stack JavaScript</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 24 }}
@@ -631,11 +561,7 @@ export default function App() {
                 transition={{ delay: 0.3, duration: 0.68 }}
                 className="mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:mt-8 sm:text-base sm:leading-8 md:text-lg"
               >
-                Desenvolvedora em formação, cursando Análise e Desenvolvimento de Sistemas, com experiência prática
-                como Estagiária de TI no CRCRJ. Tenho atuado com testes de sistemas, atendimento a chamados, registros
-                técnicos e apoio à evolução de soluções reais. Atualmente direciono meus estudos para desenvolvimento
-                web, Python, SQL, automação, APIs, uso de IA no desenvolvimento e fundamentos de Cloud/AWS, buscando
-                oportunidades em desenvolvimento, automação ou análise de sistemas júnior.
+                Estudante de Análise e Desenvolvimento de Sistemas e estagiária de TI no CRCRJ. Atuo como desenvolvedora Full Stack no ecossistema JavaScript, construindo interfaces dinâmicas com React e TypeScript e desenvolvendo APIs com Node.js, Express e PostgreSQL. Buscando oportunidades em desenvolvimento.
               </motion.p>
 
               <motion.div
